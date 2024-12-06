@@ -18,7 +18,7 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
 
-    db = client.db("sample_mflix");
+    db = client.db("shoppersMart");
     // Send a ping to confirm a successful connection
     let result = await client.db("orders").command({ ping: 1 });
     if (result?.ok) console.log("Successfuly pinged deployment. connected to DB.")

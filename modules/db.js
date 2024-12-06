@@ -1,8 +1,7 @@
 const findAllOrders = async () => {
   try {
-    let results = await db.collection("embedded_movies")
+    let results = await db.collection("orders")
       .find({})
-      .limit(5)
       .toArray();
     return results;
   } catch (error) {
