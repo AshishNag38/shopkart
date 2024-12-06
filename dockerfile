@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 2001
+EXPOSE 1010
 
 # Specify the command to run your app
 CMD ["npm", "start"]
