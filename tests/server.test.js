@@ -32,6 +32,6 @@ describe('GET /404', () => {
       .get('/404')
       .set('Accept', 'application/json');
 
-    assert.equal(res.status, 400);
+    assert.equal(res.status, 404);
   });
 });
