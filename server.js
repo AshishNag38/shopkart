@@ -6,6 +6,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.status(200).json({ msg: "server is up and running" });
+});
+
 app.use("/orders/api", orderRoute);
 
 app.use("*", (req, res) => {
@@ -14,3 +18,6 @@ app.use("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`The server is on port ${PORT}`)
 })
+
+
+module.exports = app;
