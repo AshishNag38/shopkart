@@ -1,4 +1,4 @@
-const { findAllOrders, createOrder, findByVectorIndex } = require('../modules/db');
+const { findAllOrders, createOrder, findByVectorIndex, findOrderById } = require('../modules/db');
 
 const router = require('express').Router();
 
@@ -40,4 +40,18 @@ router.get('/vectorsearch', (req, res) => {
     res.status(500).json({ msg: 'fail', reason: err.message });
   })
 })
+
+router.get("/getorder/:id", (req, res) => {
+  const id = req.params.id;
+
+  if (id) {
+    findOrderById(id).then(result => {
+      res.status(200).json({ msg: 'success', data: result });
+    }).catch(err => {
+      res.status(500).json({ msg: 'fail', reason: err.message });
+    })
+  } else res.status(400).json({ msg: "fail", reason: "ID is required" })
+})
+
+
 module.exports = router;

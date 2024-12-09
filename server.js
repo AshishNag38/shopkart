@@ -6,9 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-
 app.use("/orders/api", orderRoute);
-
 
 app.listen(PORT, () => {
   console.log(`The server is on port ${PORT}`)

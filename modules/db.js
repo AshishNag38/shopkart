@@ -54,8 +54,21 @@ const findByVectorIndex = async () => {
     throw error;
   }
 }
+
+const findOrderById = async (id) => {
+  try {
+
+    const col = db.collection('orders');
+    let result = await col.find({ _id: id }).toArray();
+
+    return result;
+  } catch (error) {
+    throw error;
+  }
+}
 module.exports = {
   findAllOrders,
   createOrder,
-  findByVectorIndex
+  findByVectorIndex,
+  findOrderById
 }
