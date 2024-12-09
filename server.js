@@ -8,6 +8,9 @@ app.use(express.json());
 
 app.use("/orders/api", orderRoute);
 
+app.use("*", (req, res) => {
+  res.status(404).json({ msg: "Request URL not found!" })
+})
 app.listen(PORT, () => {
   console.log(`The server is on port ${PORT}`)
 })

@@ -1,3 +1,5 @@
+const { ObjectId } = require("mongodb");
+
 const findAllOrders = async () => {
   try {
     let results = await db.collection("orders")
@@ -59,7 +61,7 @@ const findOrderById = async (id) => {
   try {
 
     const col = db.collection('orders');
-    let result = await col.find({ _id: id }).toArray();
+    let result = await col.find({ _id: new ObjectId(id) }).toArray();
 
     return result;
   } catch (error) {
