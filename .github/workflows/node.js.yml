@@ -27,6 +27,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Set environment variables
+        run: echo "PORT=3000" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: npm install
 
