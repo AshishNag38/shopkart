@@ -59,4 +59,4 @@ jobs:
     steps:
       - name: Pull and Deploy Docker Image Locally
         run: |
-          scripts\deploy_local.bat
+          cmd /c scripts\deploy_local.bat
