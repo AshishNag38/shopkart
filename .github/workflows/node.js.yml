@@ -51,3 +51,12 @@ jobs:
       - name: Push Docker Image to Docker Hub
         if: success()
         run: docker push ashishkumar9/shopkart:latest
+
+  deploy:
+    needs: build
+    runs-on: self-hosted
+
+    steps:
+      - name: Pull and Deploy Docker Image Locally
+        run: |
+          scripts\deploy_local.bat
