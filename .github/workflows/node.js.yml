@@ -60,9 +60,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: List Repository Files
-        run: Get-ChildItem -Recurse
-
       - name: Pull and Deploy Docker Image Locally
         run: |
           cmd /c ${{ github.workspace }}\scripts\deploy_local.bat
