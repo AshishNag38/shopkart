@@ -57,6 +57,12 @@ jobs:
     runs-on: self-hosted
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: List Repository Files
+        run: dir /s
+
       - name: Pull and Deploy Docker Image Locally
         run: |
-          cmd /c scripts\deploy_local.bat
+          cmd /c ${{ github.workspace }}\scripts\deploy_local.bat
