@@ -61,7 +61,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: List Repository Files
-        run: dir /s
+        run: Get-ChildItem -Recurse
 
       - name: Pull and Deploy Docker Image Locally
         run: |
