@@ -54,8 +54,8 @@ router.get("/getorder/:id", (req, res) => {
 })
 
 
-router.get('/dummy', (req, res) => {
-  res.status(200).json({ msg: "success", data: "server is up" });
-})
+// router.get('/dummy', (req, res) => {
+//   res.status(200).json({ msg: "success", data: "server is up" });
+// })
 
 module.exports = router;
