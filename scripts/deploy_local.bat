@@ -15,7 +15,7 @@ cd C:\nginx
 
 echo Reloading NGINX...
 :: Navigate to the NGINX directory (adjusted to the specified path)
-cd /d C:\Users\in1169.NOIDA\Downloads\nginx-1.26.2 || (
+cd /d C:\nginx || (
     echo "Failed to navigate to NGINX directory. Please verify the path."
     pause
     exit /b 1
