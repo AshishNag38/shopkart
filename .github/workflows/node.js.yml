@@ -62,4 +62,4 @@ jobs:
 
       - name: Pull and Deploy Docker Image Locally
         run: |
-          cmd /c ${{ github.workspace }}\scripts\deploy_local.bat
+          cmd /c "C:\actions-runner\shopkart_work\shopkart\shopkart\scripts\deploy_local.bat"
