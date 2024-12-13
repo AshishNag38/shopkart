@@ -13,14 +13,6 @@ echo Reloading NGINX...
 :: Navigate to the NGINX directory (adjust the path as per your NGINX installation)
 cd C:\nginx
 
-echo Reloading NGINX...
-:: Navigate to the NGINX directory (adjusted to the specified path)
-cd /d C:\nginx || (
-    echo "Failed to navigate to NGINX directory. Please verify the path."
-    pause
-    exit /b 1
-)
-
 :: Reload NGINX configuration
 nginx -s reload || (
     echo "NGINX reload failed, attempting restart"
