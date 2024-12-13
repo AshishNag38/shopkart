@@ -58,8 +58,4 @@ router.get('/dummy', (req, res) => {
   res.status(200).json({ msg: "success", data: "server is up", nginx: "updaetd nginx" });
 })
 
-router.get('/nginx', (req, res) => {
-  res.status(200).json({ msg: "nginx update" })
-})
-
 module.exports = router;
