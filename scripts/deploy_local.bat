@@ -10,7 +10,7 @@ echo Running the new container...
 docker run -d --name shopkart -p 1010:1010 ashishkumar9/shopkart:latest
 
 echo Reloading NGINX...
-:: Navigate to the NGINX directory (adjust the path as per your NGINX installation)
+:: Navigate to the NGINX directory
 cd C:\nginx
 
 :: Reload NGINX configuration
