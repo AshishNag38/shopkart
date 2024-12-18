@@ -60,6 +60,6 @@ router.get('/dummy', (req, res) => {
 
 
 router.get("/nginx", (req, res) => {
-  res.status(200).json({ msg: "success", data: "nginx up" })
+  res.status(200).json({ msg: "success", data: "nginx up", config: "added another runner" })
 })
 module.exports = router;
