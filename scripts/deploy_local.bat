@@ -7,7 +7,7 @@ docker stop shopkart
 docker rm shopkart
 
 echo Running the new container...
-docker run -d --name shopkart -p 1010:1010 ashishkumar9/shopkart:latest
+docker run -d --name shopkart -p 1010:1010 ashishkumar9/shopkart_windows:latest
 
 echo Reloading NGINX...
 :: Navigate to the NGINX directory
