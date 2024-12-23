@@ -43,6 +43,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               event_type: "deployment" 
-              workflow_id: 'deploycode.yml',
               ref: 'main',
             });
