@@ -1,13 +1,14 @@
 name: Node.js Deploy
 
 on:
-  workflow_dispatch:
-  repository_dispatch:
-    types: [deployment]
+  workflow_run:
+    workflows: ["Node.js Test"]
+    types:
+      - completed
 
 jobs:
   deploy:
-    # Specify the custom runner label
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: [self-hosted, server_runner]
 
     steps:

@@ -13,7 +13,6 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x, 20.x, 22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
       - name: Checkout code
@@ -33,14 +32,5 @@ jobs:
       - name: Run tests
         run: npm test
 
-      # Notify on completion of test job
-      - name: Notify Deployment Workflow
-        if: success()
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              event_type: "deployment" 
-            });
+    outputs:
+      tests-status: success
