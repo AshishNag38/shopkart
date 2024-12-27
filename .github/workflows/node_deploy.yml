@@ -38,7 +38,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: self-hosted
+    runs-on: [self-hosted, local_machine]
 
     steps:
       - name: Checkout code
